@@ -19,7 +19,7 @@ phases:
       - echo Build started on `date`
       - mvn clean package # Clean and package the Spring Boot application
       - cd src/web/app
-      - echo Running mvn jetty:run in src/web/app directory
+      - echo Running mvn jetty:run in src/web/app directory --auto-approve
       - mvn jetty:run -Dspring-boot.run.jvmArguments="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED"
 
   post_build:
