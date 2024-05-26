@@ -18,8 +18,8 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean package # Clean and package the Spring Boot application
-      - cd geostore/src/web/app
-      - echo Running mvn jetty:run in geostore/src/web/app directory
+      - cd src/web/app
+      - echo Running mvn jetty:run in src/web/app directory
       - mvn jetty:run -Dspring-boot.run.jvmArguments="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED"
 
   post_build:
