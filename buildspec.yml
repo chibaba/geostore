@@ -6,9 +6,9 @@ phases:
       java: corretto11 # Use Amazon Corretto 11 for the Java runtime
     commands:
       - echo Installing dependencies...
-      - sudo yum update -y
+      # - sudo yum update -y
       - sudo yum install -y httpd
-      - sudo amazon-linux-extras install java-openjdk11 -y
+      # - sudo amazon-linux-extras install java-openjdk11 -y
       - mvn install -DskipTests # Install dependencies, skipping tests for faster builds
   pre_build:
     commands:
